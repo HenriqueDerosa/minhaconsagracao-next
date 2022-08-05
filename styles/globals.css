@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-raleway;
+  }
+  body {
+    height: 100vh;
+    @apply bg-slate-300;
+    @apply text-gray-800;
+  }
+}
