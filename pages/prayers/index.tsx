@@ -1,7 +1,7 @@
 const Prayers = () => {
   return (
     <div className="m-6">
-      <p>Prayers</p>
+      <p>Orações</p>
     </div>
   );
 };

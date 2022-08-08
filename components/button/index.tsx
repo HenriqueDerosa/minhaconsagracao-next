@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 
-interface Props {
+export interface ButtonProps {
   type: "button" | "submit" | "anchor" | "link";
   href?: string;
   onClick?: () => void;
@@ -26,11 +26,11 @@ const Button = ({
   selected = undefined,
   onClick,
   children,
-}: Props) => {
+}: ButtonProps) => {
   const buttonClass =
     selected === undefined
       ? classes
-      : `${classes} ${selected && "text-yellow-600"}`;
+      : `${classes} ${selected && "text-yellow-600 hover:bg-transparent"}`;
 
   if (type === "link") {
     return (
@@ -49,7 +49,12 @@ const Button = ({
   }
 
   return (
-    <button className={buttonClass} type={type} onClick={onClick}>
+    <button
+      className={buttonClass}
+      type={type}
+      onClick={onClick}
+      disabled={selected === false}
+    >
       {children}
     </button>
   );

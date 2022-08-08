@@ -1,12 +1,7 @@
-import { useRouter } from "next/router";
 import Logo from "~/assets/icons/logo.svg";
 import Navbar from "../navbar";
 
 const Header = () => {
-  const route = useRouter();
-
-  console.log({ route });
-
   return (
     <header className="bg-violet-800 text-slate-200 relative flex flex-row justify-start">
       <Logo className="m-4 hidden sm:block" width={50} />
